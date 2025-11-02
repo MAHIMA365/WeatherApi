@@ -73,7 +73,7 @@ const Home = () => {
     <div className="min-h-screen">
       <header className="bg-white/90 backdrop-blur-md shadow-lg border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
+          <div className="flex justify-between items-center py-3">
             <div className="flex items-center space-x-3">
               <div className="text-3xl animate-float">🌦️</div>
               <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -97,26 +97,40 @@ const Home = () => {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="mb-12">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold text-gray-800 mb-2">Choose Your City</h2>
-            <p className="text-gray-600">Select a city to view current weather conditions</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-[600px]">
+          {/* Left Side - Cities */}
+          <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-6">
+            <div className="text-center mb-6">
+              <h2 className="text-3xl font-bold text-gray-800 mb-2">Choose Your City</h2>
+              <p className="text-gray-600">Select a city to view weather conditions</p>
+            </div>
+            <CityList onCitySelect={handleCitySelect} />
           </div>
-          <CityList onCitySelect={handleCitySelect} />
+
+          {/* Right Side - Weather Results */}
+          <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-6 flex items-center justify-center">
+            {loading && (
+              <div className="text-center">
+                <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mb-4"></div>
+                <div className="text-xl text-gray-600">Loading weather data...</div>
+              </div>
+            )}
+
+            {weather && !loading && (
+              <div className="w-full">
+                <WeatherCard weather={weather} />
+              </div>
+            )}
+
+            {!weather && !loading && (
+              <div className="text-center text-gray-500">
+                <div className="text-6xl mb-4">🌤️</div>
+                <h3 className="text-xl font-semibold mb-2">Select a City</h3>
+                <p>Choose a city from the left to see weather information</p>
+              </div>
+            )}
+          </div>
         </div>
-
-        {loading && (
-          <div className="text-center py-12">
-            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mb-4"></div>
-            <div className="text-xl text-gray-600">Loading weather data...</div>
-          </div>
-        )}
-
-        {weather && !loading && (
-          <div className="max-w-lg mx-auto">
-            <WeatherCard weather={weather} />
-          </div>
-        )}
       </main>
     </div>
   );
