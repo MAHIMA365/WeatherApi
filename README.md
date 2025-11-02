@@ -25,6 +25,7 @@ A modern, responsive weather application built with .NET 8 Web API backend and R
 
 ## 🏗️ Project Structure
 
+```
 WeatherApi/
 ├── WeatherApi/                    # Backend (.NET 8 Web API)
 │   ├── Controllers/
@@ -55,7 +56,7 @@ WeatherApi/
 │   └── vite.config.js           # Vite configuration
 │
 └── README.md                    # This file
-
+```
 
 ## 🚀 Quick Start
 
@@ -67,7 +68,7 @@ WeatherApi/
 
 ### 1. Backend Setup
 
-bash
+```bash
 # Navigate to backend directory
 cd WeatherApi/WeatherApi
 
@@ -79,13 +80,13 @@ dotnet restore
 
 # Run the backend
 dotnet run
-
+```
 
 **Backend will run on:** `https://localhost:5190` or `http://localhost:5190`
 
 ### 2. Frontend Setup
 
-bash
+```bash
 # Navigate to frontend directory
 cd weather-frontend
 
@@ -94,20 +95,20 @@ npm install
 
 # Configure environment variables
 # Update .env file with your values:
-
+```
 
 **Create/Update `.env` file:**
-env
+```env
 VITE_API_URL=http://localhost:5190/api
 VITE_AUTH0_DOMAIN=your-domain.auth0.com
 VITE_AUTH0_CLIENT_ID=your-client-id
 VITE_AUTH0_AUDIENCE=your-api-identifier
+```
 
-
-bash
+```bash
 # Run the frontend
 npm run dev
-
+```
 
 **Frontend will run on:** `http://localhost:5173`
 
@@ -129,7 +130,7 @@ npm run dev
 ## 🔧 Configuration
 
 ### Backend Configuration (appsettings.json)
-json
+```json
 {
   "OpenWeatherMap": {
     "ApiKey": "YOUR_OPENWEATHERMAP_API_KEY"
@@ -142,15 +143,15 @@ json
     "Audience": "YOUR_AUTH0_API_IDENTIFIER"
   }
 }
-
+```
 
 ### Frontend Configuration (.env)
-``env
+```env
 VITE_API_URL=http://localhost:5190/api
 VITE_AUTH0_DOMAIN=your-domain.auth0.com
 VITE_AUTH0_CLIENT_ID=your-client-id
 VITE_AUTH0_AUDIENCE=your-api-identifier
-
+```
 
 ## 📡 API Endpoints
 
@@ -161,7 +162,7 @@ VITE_AUTH0_AUDIENCE=your-api-identifier
 ### Example Responses
 
 **Cities Endpoint:**
-json
+```json
 [
   {
     "cityCode": "1248991",
