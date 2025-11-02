@@ -281,7 +281,7 @@ The application includes weather data for 8 major cities worldwide:
 7. **Shanghai, China** (ID: 1796236)
 8. **Oslo, Norway** (ID: 3143244)
 
-## 🚀 Deployment
+## 🚀 Deployment(Haven't deployed)
 
 ### Backend Deployment
 - **Azure App Service** - Recommended for .NET applications
