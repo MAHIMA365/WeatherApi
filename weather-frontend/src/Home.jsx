@@ -37,18 +37,33 @@ const Home = () => {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-600">
-        <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-          <h1 className="text-3xl font-bold mb-4">Weather App</h1>
-          <p className="text-gray-600 mb-6">
-            Please log in to view weather information
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-400 via-cyan-500 to-blue-600 relative overflow-hidden">
+        {/* Animated weather elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 text-6xl animate-float opacity-20">☁️</div>
+          <div className="absolute top-40 right-32 text-4xl animate-bounce opacity-30" style={{animationDelay: '1s'}}>🌤️</div>
+          <div className="absolute bottom-32 left-32 text-5xl animate-pulse opacity-25">🌧️</div>
+          <div className="absolute bottom-20 right-20 text-3xl animate-float opacity-20" style={{animationDelay: '2s'}}>❄️</div>
+          <div className="absolute top-1/2 left-1/4 text-7xl animate-bounce opacity-15" style={{animationDelay: '0.5s'}}>☀️</div>
+        </div>
+        
+        <div className="bg-white/90 backdrop-blur-md p-10 rounded-2xl shadow-2xl text-center border border-white/20 relative z-10 max-w-md w-full mx-4">
+          <div className="text-6xl mb-6 animate-float">🌦️</div>
+          <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Weather App
+          </h1>
+          <p className="text-gray-600 mb-8 text-lg">
+            Discover weather conditions around the world
           </p>
           <button
             onClick={() => loginWithRedirect()}
-            className="auth-button"
+            className="auth-button w-full text-lg py-4"
           >
-            Log In
+            🔐 Sign In to Continue
           </button>
+          <p className="text-sm text-gray-500 mt-4">
+            Get real-time weather updates for cities worldwide
+          </p>
         </div>
       </div>
     );
