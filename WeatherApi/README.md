@@ -63,7 +63,7 @@ Returns current weather data for a specific city.
 ```json
 {
   "OpenWeatherMap": {
-    "ApiKey": "YOUR_API_KEY_HERE"
+    "ApiKey": "YOUR_API_KEY_HERE"//already added in .env file
   },
   "ConnectionStrings": {
     "DefaultConnection": "Server=.;Database=WeatherDB;Trusted_Connection=True;TrustServerCertificate=True;"

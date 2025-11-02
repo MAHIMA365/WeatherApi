@@ -145,3 +145,4 @@ D:\WeatherApi\WeatherApi\WeatherApi\obj\Debug\net8.0\refint\WeatherApi.dll
 D:\WeatherApi\WeatherApi\WeatherApi\obj\Debug\net8.0\WeatherApi.pdb
 D:\WeatherApi\WeatherApi\WeatherApi\obj\Debug\net8.0\WeatherApi.genruntimeconfig.cache
 D:\WeatherApi\WeatherApi\WeatherApi\obj\Debug\net8.0\ref\WeatherApi.dll
+D:\WeatherApi\WeatherApi\WeatherApi\obj\Debug\net8.0\WeatherApi.sourcelink.json
