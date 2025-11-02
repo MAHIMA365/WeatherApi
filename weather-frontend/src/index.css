@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-900 min-h-screen;
+  html, body, #root {
+    @apply bg-gradient-to-br from-blue-400 via-cyan-500 to-blue-600 text-gray-900 min-h-screen;
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
   }
 }
 

@@ -37,7 +37,7 @@ const Home = () => {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-400 via-cyan-500 to-blue-600 relative overflow-hidden">
+      <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
         {/* Animated weather elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 text-6xl animate-float opacity-20">☁️</div>
@@ -50,7 +50,7 @@ const Home = () => {
         <div className="bg-white/90 backdrop-blur-md p-10 rounded-2xl shadow-2xl text-center border border-white/20 relative z-10 max-w-md w-full mx-4">
           <div className="text-6xl mb-6 animate-float">🌦️</div>
           <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Weather App
+            FidenzTech Weather App 
           </h1>
           <p className="text-gray-600 mb-8 text-lg">
             Discover weather conditions around the world
@@ -71,7 +71,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      <header className="bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20">
+      <header className="bg-white/90 backdrop-blur-md shadow-lg border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center space-x-3">
